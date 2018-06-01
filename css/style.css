@@ -1,0 +1,43 @@
+button {
+  background-color: lawngreen;
+  border: 2px solid;
+  border-radius: 3px;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: 2s 0.5s cubic-bezier(.67,1.09,.3,-0.43);
+  /* linear, ease, ease-in, ease-out, ease-in-out */
+  transition-property: padding, font-size;
+}
+
+button:hover {
+  border-radius: 6px;
+  border-width: 4px;
+  font-size: 40px;
+  padding: 20px 40px;
+}
+
+img {
+  position: absolute;
+  height: 300px;
+  animation: crazyFlip 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes crazyFlip {
+  0% {
+    top: -300px;
+  }
+
+  50% {
+    top: 200px;
+    transform: rotateX(0);
+  }
+
+  100% {
+    top: 200px;
+    transform: rotateX(360deg);
+  }
+}
